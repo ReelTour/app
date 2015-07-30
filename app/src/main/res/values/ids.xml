@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="dialog_password_field" type="id"/>
+    <item name="answer_comment_field" type="id" />
+    <item name="list_position" type="id" />
+    <item name="radio_group" type="id" />
+    <item name="answer_option_field" type="id" />
+    <item name="question_id" type="id"/>
+</resources>

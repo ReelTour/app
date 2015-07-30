@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="gaftech.reeltour.AgentActivity"
+    android:background="@drawable/gui_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_existing_tour_btn_label"
+            android:id="@+id/start_existing_tour_btn"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_existing_tour_label"
+            android:id="@+id/edit_existing_tour_btn"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="@dimen/button_topbottom_margin" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_new_tour_btn_label"
+            android:id="@+id/start_new_tour_btn"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="@dimen/button_topbottom_margin" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_btn_label"
+            android:id="@+id/login_button"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="@dimen/button_topbottom_margin" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logout_btn_label"
+            android:id="@+id/logout_button"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="@dimen/button_topbottom_margin" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView2"
+            android:src="@drawable/logo"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+</RelativeLayout>

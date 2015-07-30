@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/questionsList"
+        android:layout_margin="@dimen/room_item_margin"
+        android:layout_above="@+id/bottom_panel"
+       />
+
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/room_item_margin">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/submit_questions_btn"
+                android:id="@+id/submitDialog"
+                android:layout_gravity="right"
+                style="@style/GHButton"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/skipSubmit"
+                android:layout_weight="1"
+                android:text="@string/skip_submit_btn_label"
+                style="@style/GHButton" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

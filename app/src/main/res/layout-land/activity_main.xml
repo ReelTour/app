@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/waiting_screen_pane"
+    android:padding="0dp"
+    android:background="#fff">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageBgWelcomeScreen"
+        android:background="#000"
+        android:scaleType="centerInside" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.8">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/box_with_border" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView5"
+                    android:scaleType="fitCenter"
+                    android:layout_weight="0.1"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:src="@drawable/logo_with_name" />
+
+                <TextView
+                    android:text="@string/welcome_home_string"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="32sp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/room_item_margin"
+                    android:layout_weight="0.9"
+                    android:textColor="#000" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+
+</RelativeLayout>

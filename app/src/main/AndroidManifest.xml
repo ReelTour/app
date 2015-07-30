@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gaftech.reeltour" >
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <application
+        android:name="gaftech.reeltour.waiter.ControlApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="gaftech.reeltour.WaitingScreenActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="gaftech.reeltour.WelcomeActivity"
+            android:label="@string/title_activity_welcome" >
+        </activity>
+        <activity
+            android:name="gaftech.reeltour.AgentActivity"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:label="@string/title_activity_agent" >
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.MONKEY"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+       <!-- <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>-->
+        <activity
+            android:name="gaftech.reeltour.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name="gaftech.reeltour.CreateTourActivity"
+            android:label="@string/title_activity_create_tour" >
+
+        </activity>
+        <activity
+            android:name="gaftech.reeltour.SelectRoomActivity"
+            android:label="@string/title_activity_select_room" >
+        </activity>
+        <activity
+            android:name="gaftech.reeltour.RoomsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_rooms" >
+
+        </activity>
+        <activity
+            android:name="gaftech.reeltour.authentification.AuthenticatorActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_login" >
+
+        </activity>
+
+        <service android:name="gaftech.reeltour.authentification.ReelAuthentificatorService" android:exported="true" android:process=":auth">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authentificator" />
+        </service>
+        <service
+            android:name="gaftech.reeltour.synchronization.SyncService"
+            android:exported="true"
+            android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <provider
+            android:authorities="gaftech.reeltour.provider.reeltour"
+            android:name="gaftech.reeltour.contentprovider.ReelContentProvider"></provider>
+    </application>
+    <!-- client -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- Authenticator -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <!--Sync -->
+    <uses-permission
+        android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission
+        android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+
+</manifest>

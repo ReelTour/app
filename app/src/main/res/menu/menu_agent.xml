@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="gaftech.reeltour.AgentActivity">
+
+    <item android:id="@+id/action_faq" android:title="@string/faq_menu_item" app:showAsAction="never" />
+    <item android:id="@+id/contactus" android:title="@string/contactus_menu_item" app:showAsAction="never" />
+
+</menu>

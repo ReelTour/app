@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="welcome_home_buyer_message_margin">10pt</dimen>
+    <dimen name="room_item_margin">10dp</dimen>
+    <dimen name="button_topbottom_margin">5dp</dimen>
+</resources>
